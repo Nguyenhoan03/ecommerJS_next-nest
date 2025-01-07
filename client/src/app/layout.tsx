@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Layouts/Header";
 import Footer from "../components/Layouts/Footer";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,8 @@ export default function RootLayout({
         {children}
         <Footer/>
       </body>
+      <Script src="https://accounts.google.com/gsi/client" strategy="beforeInteractive" />
+
     </html>
   );
 }

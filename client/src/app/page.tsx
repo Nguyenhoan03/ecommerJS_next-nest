@@ -28,7 +28,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { useEffect } from "react"
-import { ProductType } from "@/types/product"
+import { Product } from "@/types/product"
 import axios from "axios"
 export default function Home() {
   const { hours, minutes, seconds } = useCountdownTimer();
@@ -91,7 +91,7 @@ export default function Home() {
       code: "WS200K"
     }
   ]
-  const [data_card, setData_card] = useState<ProductType[]>([]);
+  const [data_card, setData_card] = useState<Product[]>([]);
   useEffect(() => {
     try {
       const fetchData = async () => {
@@ -104,10 +104,10 @@ export default function Home() {
       console.log(error.message() + "lỗi hoanpp");
     }
   }, [])
-  const [data_card_ao_khoac, setData_card_ao_khoac] = useState<ProductType[]>([]);
-const [data_card_ao_thun, setData_card_ao_thun] = useState<ProductType[]>([]);
-const [data_card_quan_jeans, setData_card_quan_jeans] = useState<ProductType[]>([]);
-const [data_card_ao_polo, setData_card_ao_polo] = useState<ProductType[]>([]);
+  const [data_card_ao_khoac, setData_card_ao_khoac] = useState<Product[]>([]);
+const [data_card_ao_thun, setData_card_ao_thun] = useState<Product[]>([]);
+const [data_card_quan_jeans, setData_card_quan_jeans] = useState<Product[]>([]);
+const [data_card_ao_polo, setData_card_ao_polo] = useState<Product[]>([]);
 
 useEffect(() => {
   const fetchData = async () => {

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { NavigationMenuDemo } from './Navbar'
 import { CiSearch } from "react-icons/ci"
 import { FaShoppingBag } from "react-icons/fa"
-    
+
 export default function Header() {
   return (
     <div className='w-full py-2'>
@@ -29,6 +29,10 @@ export default function Header() {
 
           
           <div className="flex items-center">
+            <div className="mr-2">
+              <button className="px-2"><Link href="/login"> Đăng nhập / </Link></button>
+              <button><Link href="/register"> Đăng ký </Link></button>
+            </div>
             <div className="relative flex items-center bg-white rounded-lg hover:bg-gray-50 transition-colors">
               <input
                 type="text"

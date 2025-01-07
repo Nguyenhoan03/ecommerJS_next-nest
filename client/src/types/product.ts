@@ -1,19 +1,38 @@
-export interface BaseProduct {
-  id?: number        
+export interface Product {
+  id: number        
   name: string
   image: string
-  price?: number
-  discount_percent?: number   
-  colors: string[]
-  isExclusive?: boolean 
+  price: number
+  colors?: string[]
+  discount_percent: number
+  sold: number
+  total_reviews: number
+  created_at: string
+  updated_at: string | null
+  url_affiliate: string
 }
 
-
-
-
-export interface ProductType extends BaseProduct {
-  details: ProductDetail[]
+export interface Category {
+  id: number
+  name: string
+  slug: string
+  parent_id: number
+  level: number
+  created_at: string
+  updated_at: string | null
+  products: Product[]
+  subCategories?: subCategories[]
 }
+interface subCategories{
+  id: number
+  name: string
+  slug: string
+  parent_id: number
+  level: number
+  created_at: string
+  updated_at: string | null
+}
+
 
 export interface ProductDetail {
   id: number
